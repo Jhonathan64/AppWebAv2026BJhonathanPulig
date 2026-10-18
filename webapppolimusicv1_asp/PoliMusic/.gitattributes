@@ -1,0 +1,25 @@
+# Comportamiento de fines de línea y codificación
+# El script original de la BD está en UTF-16: tratarlo como binario evita
+# que Git lo convierta y lo corrompa.
+
+* text=auto eol=crlf
+
+*.asp  text eol=crlf
+*.css  text eol=crlf
+*.js   text eol=crlf
+*.html text eol=crlf
+*.md   text eol=crlf
+*.py   text eol=crlf
+*.sln  text eol=crlf
+
+# Scripts SQL: no tocar (el original es UTF-16LE)
+*.sql  -text diff=astextplain
+
+# Binarios
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.mp3  binary
+*.zip  binary

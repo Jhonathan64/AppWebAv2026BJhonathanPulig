@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--
+  PoliMusic - vista previa estática del diseño.
+  No es la aplicación (la aplicación es ASP clásico + SQL Server):
+  este archivo sólo muestra la interfaz y permite probar el reproductor
+  con los archivos de ejemplo incluidos en site/songFiles.
+-->
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vista previa del diseño · PoliMusic</title>
+    <link rel="icon" href="../site/assets/img/logo.png">
+    <link rel="stylesheet" href="../site/assets/css/polimusic.css">
+</head>
+<body class="app" data-root="">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__text">Poli<b>Music</b></span>
+        </a>
+        <nav class="nav" aria-label="Navegación principal">
+            <a class="nav__item is-active" href="#"><span class="ico ico--home" aria-hidden="true"></span><span>Inicio</span></a>
+            <a class="nav__item" href="#"><span class="ico ico--search" aria-hidden="true"></span><span>Buscar</span></a>
+            <a class="nav__item" href="#"><span class="ico ico--song" aria-hidden="true"></span><span>Canciones</span></a>
+            <a class="nav__item" href="#"><span class="ico ico--album" aria-hidden="true"></span><span>Álbumes</span></a>
+            <a class="nav__item" href="#"><span class="ico ico--artist" aria-hidden="true"></span><span>Artistas</span></a>
+            <a class="nav__item" href="#"><span class="ico ico--list" aria-hidden="true"></span><span>Mis playlists</span></a>
+            <a class="nav__item nav__item--admin" href="#"><span class="ico ico--admin" aria-hidden="true"></span><span>Administración</span></a>
+        </nav>
+        <div class="sidebar__foot">
+            <a class="user-chip" href="#">
+                <img class="avatar" src="../site/userImages/jpulig.png" alt="">
+                <span class="user-chip__name">Jhonathan Pulig</span>
+            </a>
+            <a class="btn btn--ghost btn--sm" href="#">Salir</a>
+        </div>
+    </aside>
+
+    <div class="main">
+        <header class="topbar">
+            <button class="icon-btn topbar__menu" type="button" id="btnMenu" aria-label="Mostrar menú">
+                <span></span><span></span><span></span>
+            </button>
+            <form class="searchbox" onsubmit="return false">
+                <span class="ico ico--search" aria-hidden="true"></span>
+                <input type="search" placeholder="Busca canciones, álbumes, artistas..." aria-label="Buscar">
+            </form>
+            <div class="topbar__right">
+                <a class="badge-admin" href="#">Admin</a>
+                <a class="user-chip user-chip--top" href="#">
+                    <img class="avatar" src="../site/userImages/jpulig.png" alt="">
+                    <span class="user-chip__name">Jhonathan Pulig</span>
+                </a>
+            </div>
+        </header>
+
+        <main class="content" id="contenido">
+            <div class="flash flash--ok" role="status">
+                <span class="flash__icon" aria-hidden="true"></span>
+                <span>Esta es una vista previa estática del diseño. La aplicación real es ASP clásico + SQL Server.</span>
+                <button type="button" class="flash__close" aria-label="Cerrar">&times;</button>
+            </div>
+
+            <section class="hero">
+                <div class="hero__art hero__art--round">
+                    <img src="../site/userImages/jpulig.png" alt="">
+                </div>
+                <div>
+                    <span class="hero__eyebrow">Tu biblioteca</span>
+                    <h1 class="hero__title">Buenas tardes, Jhonathan Pulig</h1>
+                    <div class="hero__meta">
+                        <span>5 canciones</span><span>5 álbumes</span><span>5 artistas</span>
+                    </div>
+                    <div class="hero__actions">
+                        <button class="btn btn--primary" type="button" data-play-all>
+                            <span class="ico ico--play" aria-hidden="true"></span> Explorar canciones
+                        </button>
+                        <a class="btn btn--soft" href="#">Mis playlists</a>
+                        <a class="btn btn--ghost" href="#">Panel de administración</a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <header class="section-head">
+                    <div>
+                        <h1 class="section-title">Más escuchadas</h1>
+                        <p class="section-sub">Tarjetas de canción con reproducción directa</p>
+                    </div>
+                </header>
+                <div class="grid" data-queue>
+                    <article class="card" data-queue-item data-id="1" data-title="Adventure"
+                             data-artist="Juan Gabriel"
+                             data-src="../site/songFiles/bensound-adventure.mp3"
+                             data-cover="../site/albumImages/album1.png">
+                        <div class="card__art">
+                            <img src="../site/albumImages/album1.png" alt="">
+                            <button class="card__play" type="button" data-play="1" aria-label="Reproducir">
+                                <span class="ico ico--play" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <h3 class="card__title">Adventure</h3>
+                        <p class="card__meta">Juan Gabriel</p>
+                        <p class="card__hint">12 reproducciones</p>
+                    </article>
+                    <article class="card" data-queue-item data-id="2" data-title="Dreams"
+                             data-artist="Ana Gabriel"
+                             data-src="../site/songFiles/bensound-dreams.mp3"
+                             data-cover="../site/albumImages/album2.png">
+                        <div class="card__art">
+                            <img src="../site/albumImages/album2.png" alt="">
+                            <button class="card__play" type="button" data-play="2" aria-label="Reproducir">
+                                <span class="ico ico--play" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <h3 class="card__title">Dreams</h3>
+                        <p class="card__meta">Ana Gabriel</p>
+                        <p class="card__hint">9 reproducciones</p>
+                    </article>
+                    <article class="card" data-queue-item data-id="3" data-title="Energy"
+                             data-artist="Mariah Carey"
+                             data-src="../site/songFiles/bensound-energy.mp3"
+                             data-cover="../site/albumImages/album3.png">
+                        <div class="card__art">
+                            <img src="../site/albumImages/album3.png" alt="">
+                            <button class="card__play" type="button" data-play="3" aria-label="Reproducir">
+                                <span class="ico ico--play" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <h3 class="card__title">Energy</h3>
+                        <p class="card__meta">Mariah Carey</p>
+                        <p class="card__hint">7 reproducciones</p>
+                    </article>
+                    <article class="card" data-queue-item data-id="4" data-title="Scifi"
+                             data-artist="Elvis Presley"
+                             data-src="../site/songFiles/bensound-scifi.mp3"
+                             data-cover="../site/albumImages/album4.png">
+                        <div class="card__art">
+                            <img src="../site/albumImages/album4.png" alt="">
+                            <button class="card__play" type="button" data-play="4" aria-label="Reproducir">
+                                <span class="ico ico--play" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <h3 class="card__title">Scifi</h3>
+                        <p class="card__meta">Elvis Presley</p>
+                        <p class="card__hint">4 reproducciones</p>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <header class="section-head">
+                    <div>
+                        <h1 class="section-title">Álbumes y artistas</h1>
+                        <p class="section-sub">Tarjetas con carátula cuadrada y redonda</p>
+                    </div>
+                </header>
+                <div class="grid">
+                    <a class="card card--album" href="#">
+                        <div class="card__art"><img src="../site/albumImages/album5.png" alt=""></div>
+                        <h3 class="card__title">Country Album</h3>
+                        <p class="card__meta">1990</p>
+                    </a>
+                    <a class="card card--artist" href="#">
+                        <div class="card__art card__art--round"><img src="../site/ArtistImages/artist1.jpg" alt=""></div>
+                        <h3 class="card__title">Juan Gabriel</h3>
+                        <p class="card__meta">Artista</p>
+                    </a>
+                    <a class="card card--artist" href="#">
+                        <div class="card__art card__art--round"><img src="../site/ArtistImages/artist3.jpg" alt=""></div>
+                        <h3 class="card__title">Mariah Carey</h3>
+                        <p class="card__meta">Artista</p>
+                    </a>
+                    <a class="card card--playlist" href="#">
+                        <div class="card__art"><img src="../site/playlistImages/playlist1.png" alt=""></div>
+                        <h3 class="card__title">Para programar</h3>
+                        <p class="card__meta">Jhonathan Pulig · 3 canciones</p>
+                        <p class="card__badge">Pública</p>
+                    </a>
+                </div>
+            </section>
+
+            <section data-queue>
+                <header class="section-head">
+                    <div>
+                        <h1 class="section-title">Lista de canciones</h1>
+                        <p class="section-sub">Vista tipo tracklist; al reproducir se encola toda la lista</p>
+                    </div>
+                </header>
+                <ul class="track-list">
+                    <li class="track" data-queue-item data-id="1" data-title="Adventure" data-artist="Juan Gabriel"
+                        data-src="../site/songFiles/bensound-adventure.mp3" data-cover="../site/albumImages/album1.png">
+                        <button class="track__play" type="button" data-play="1" aria-label="Reproducir">
+                            <span class="ico ico--play" aria-hidden="true"></span>
+                        </button>
+                        <img class="track__art" src="../site/albumImages/album1.png" alt="">
+                        <div class="track__info">
+                            <span class="track__title">Adventure</span>
+                            <span class="track__artist">Juan Gabriel</span>
+                        </div>
+                        <span class="track__plays">12 <span class="muted">repros</span></span>
+                        <span class="track__actions"></span>
+                    </li>
+                    <li class="track" data-queue-item data-id="5" data-title="Tomorrow" data-artist="Edward Sheeran"
+                        data-src="../site/songFiles/bensound-tomorrow.mp3" data-cover="../site/albumImages/album5.png">
+                        <button class="track__play" type="button" data-play="5" aria-label="Reproducir">
+                            <span class="ico ico--play" aria-hidden="true"></span>
+                        </button>
+                        <img class="track__art" src="../site/albumImages/album5.png" alt="">
+                        <div class="track__info">
+                            <span class="track__title">Tomorrow</span>
+                            <span class="track__artist">Edward Sheeran</span>
+                        </div>
+                        <span class="track__plays">4 <span class="muted">repros</span></span>
+                        <span class="track__actions"></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel__title">Panel de administración (ejemplo)</h2>
+                <p class="panel__sub">Estadísticas, módulos y tablas con acciones.</p>
+                <div class="stats">
+                    <div class="stat"><div class="stat__num">6</div><div class="stat__label">Usuarios (1 administrador)</div></div>
+                    <div class="stat"><div class="stat__num">5</div><div class="stat__label">Canciones</div></div>
+                    <div class="stat"><div class="stat__num">5</div><div class="stat__label">Álbumes</div></div>
+                    <div class="stat"><div class="stat__num">7</div><div class="stat__label">Playlists</div></div>
+                </div>
+                <div class="table-wrap" style="margin-top:18px">
+                    <table class="table">
+                        <thead><tr><th>#</th><th></th><th>Usuario</th><th>Correo</th><th>Tipo</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><img class="thumb" src="../site/userImages/default.jpg" alt=""></td>
+                                <td><strong>userNormal</strong></td>
+                                <td class="muted">usrnormal@epn.edu.ec</td>
+                                <td><span class="pill">Usuario</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><img class="thumb" src="../site/userImages/root.png" alt=""></td>
+                                <td><strong>userAdmin</strong></td>
+                                <td class="muted">usrfakeadmin@epn.edu.ec</td>
+                                <td><span class="pill pill--admin">Administrador</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <div class="player" id="player" data-empty="true">
+            <audio id="audio" preload="metadata"></audio>
+            <div class="player__now">
+                <img class="player__cover" id="playerCover" src="../site/assets/img/logo.png" alt="">
+                <div class="player__meta">
+                    <strong id="playerTitle">Selecciona una canción</strong>
+                    <span id="playerArtist">PoliMusic</span>
+                </div>
+            </div>
+            <div class="player__controls">
+                <div class="player__buttons">
+                    <button class="icon-btn" type="button" id="btnPrev" title="Anterior" aria-label="Anterior">
+                        <span class="ico ico--prev" aria-hidden="true"></span>
+                    </button>
+                    <button class="play-btn" type="button" id="btnPlay" title="Reproducir" aria-label="Reproducir">
+                        <span class="ico ico--play" aria-hidden="true"></span>
+                    </button>
+                    <button class="icon-btn" type="button" id="btnNext" title="Siguiente" aria-label="Siguiente">
+                        <span class="ico ico--next" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="player__bar">
+                    <span class="player__time" id="timeCur">0:00</span>
+                    <input class="seek" type="range" id="seek" min="0" max="1000" value="0" step="1" aria-label="Progreso">
+                    <span class="player__time" id="timeDur">0:00</span>
+                </div>
+            </div>
+            <div class="player__volume">
+                <span class="ico ico--vol" aria-hidden="true"></span>
+                <input class="vol" type="range" id="vol" min="0" max="100" value="80" aria-label="Volumen">
+            </div>
+        </div>
+
+        <nav class="tabbar" aria-label="Navegación móvil">
+            <a class="tabbar__item is-active" href="#"><span class="ico ico--home" aria-hidden="true"></span><span>Inicio</span></a>
+            <a class="tabbar__item" href="#"><span class="ico ico--search" aria-hidden="true"></span><span>Buscar</span></a>
+            <a class="tabbar__item" href="#"><span class="ico ico--list" aria-hidden="true"></span><span>Listas</span></a>
+            <a class="tabbar__item" href="#"><span class="ico ico--admin" aria-hidden="true"></span><span>Admin</span></a>
+        </nav>
+    </div>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<script src="../site/assets/js/player.js"></script>
+<script src="../site/assets/js/polimusic.js"></script>
+</body>
+</html>

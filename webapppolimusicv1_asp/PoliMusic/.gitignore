@@ -1,0 +1,48 @@
+# ---------- Visual Studio ----------
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+BuildLog.htm
+*.VisualState.xml
+*.psess
+*.vsp
+*.vspx
+
+# ---------- ASP clásico / IIS ----------
+*.asp.bak
+*.config.backup
+web.config.local
+App_Data/
+*.log
+
+# ---------- Sistema / editores ----------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+.idea/
+
+# ---------- Python (herramientas de apoyo) ----------
+__pycache__/
+*.py[cod]
+.venv/
+env/
+
+# ---------- Temporales ----------
+*.tmp
+*.temp
+~$*
+
+site/includes/config.local.asp
+.local-iis/
